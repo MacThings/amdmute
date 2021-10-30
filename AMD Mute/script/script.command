@@ -12,10 +12,10 @@ function generate()
     
     if [[ "$check" = "EGP1" ]]; then
         type="$check"
-        echo "$type"
     fi
     
     dev_path=$( echo "${dev_path%.*}" )
+    
     cp SSDT-MUTE-GENERIC-RADEON.aml /private/tmp/.
     ./iasl -d /private/tmp/SSDT-MUTE-GENERIC-RADEON.aml
     perl -pi -e "s/XXXX/$dev_path/g" /private/tmp/SSDT-MUTE-GENERIC-RADEON.dsl

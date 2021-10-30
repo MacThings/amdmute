@@ -110,13 +110,31 @@
                                 <buttonCell key="cell" type="push" title="Generate SSDT" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="PP0-zj-DSz">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="generate:" target="xne-2I-U2u" id="HVj-Mh-kQt"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OFS-2v-45D">
+                                <rect key="frame" x="76" y="13" width="133" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cnF-vU-lGf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="quit:" target="xne-2I-U2u" id="t1q-d8-hUi"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="bt_generate" destination="UeA-R0-1de" id="jGC-X8-aAY"/>
+                        <outlet property="bt_quit" destination="OFS-2v-45D" id="kEY-F5-WcI"/>
+                    </connections>
                 </viewController>
                 <customObject id="g0T-2c-0eo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="tdR-mU-NSB"/>

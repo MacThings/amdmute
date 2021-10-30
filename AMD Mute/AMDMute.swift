@@ -8,7 +8,12 @@
 import Cocoa
 
 class AMDMute: NSViewController {
-        
+    
+    
+    @IBOutlet weak var bt_generate: NSButton!
+    @IBOutlet weak var bt_quit: NSButton!
+    
+    
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
     override func viewDidLoad() {
@@ -29,6 +34,8 @@ class AMDMute: NSViewController {
     
     @IBAction func generate(_ sender: Any) {
         self.syncShellExec(path: self.scriptPath, args: ["generate"])
+        self.bt_generate.isHidden=true
+        self.bt_quit.isHidden=false
         let alert = NSAlert()
             alert.messageText = NSLocalizedString("Done!", comment: "")
             alert.informativeText = NSLocalizedString("Completed the creation of the SSDT. You can find it on yout desktop. Good luck.\n\nSSDT-MUTE-GENERIC-RADEON.aml", comment: "")
@@ -40,6 +47,11 @@ class AMDMute: NSViewController {
     }
     
     
+    @IBAction func quit(_ sender: Any) {
+        NSApplication.shared.terminate(self)
+    }
+    
+   
     func syncShellExec(path: String, args: [String] = []) {
         let process            = Process()
         process.launchPath     = "/bin/bash"

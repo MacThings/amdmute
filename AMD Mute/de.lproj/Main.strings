@@ -1,0 +1,20 @@
+/* Class = "NSMenuItem"; title = "Quit AMD Mute"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Beende AMD Mute";
+
+/* Class = "NSMenuItem"; title = "About AMD Mute"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Über AMD Mute";
+
+/* Class = "NSViewController"; title = "About"; ObjectID = "inE-pO-o9v"; */
+"inE-pO-o9v.title" = "Über";
+
+/* Class = "NSTextFieldCell"; title = "Generate a SSDT to disable GFX audio. Should work for the most systems with one GFX card installed."; ObjectID = "jD1-XH-Q5A"; */
+"jD1-XH-Q5A.title" = "Erzeuge eine SSDT um die Tonausgabe der Grafikkarte zu unterdrücken. Die SSDT sollte für die meisten Systeme mit einer AMD Grafikkarte funktionieren.";
+
+/* Class = "NSButtonCell"; title = "Generate SSDT"; ObjectID = "PP0-zj-DSz"; */
+"PP0-zj-DSz.title" = "Erzeuge SSDT";
+
+/* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "sAs-9d-8p8"; */
+"sAs-9d-8p8.title" = "Suche nach Updates...";
+
+
+

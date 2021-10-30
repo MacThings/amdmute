@@ -22,7 +22,7 @@ function generate()
     
     if [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
         file="$dev_path"
-    elif [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
+    elif [[ "$dev_path" = "PCI0.PEG0.PEGP" ]]; then
         file="$dev_path"
     else
         _helpDefaultWrite "Supported" "No"

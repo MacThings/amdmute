@@ -21,19 +21,17 @@ function generate()
     dev_path=$( ioreg -p IODeviceTree -n HDAU -r | grep "acpi-path" | sed -e 's/.*\:\///g' -e 's/_SB\///g' -e 's/HDAU.*"//g' -e 's/\/$//g' -e 's/@[0-9]*//g' -e 's/\//./g'  )
     
     if [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
-        _helpDefaultWrite "Supported" "Yes"
-        file="PCI0.PEG0.GFX0.EGP1"
-        
+        file="$dev_path"
     elif [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
-        _helpDefaultWrite "Supported" "Yes"
-        file="PCI0.PEG0.PEGP"
+        file="$dev_path"
     else
         _helpDefaultWrite "Supported" "No"
     fi
     
-    dev_path=$( echo "${dev_path%.*}" )
+    #dev_path=$( echo "${dev_path%.*}" )
     
     cp "$file".aml ~/Desktop/SSDT-MUTE-GENERIC-RADEON.aml
+    
     #cp "$file".aml /private/tmp/.
     #./iasl -d /private/tmp/"$file".aml
     #perl -pi -e "s/XXXX/$dev_path/g" /private/tmp/"$file".dsl

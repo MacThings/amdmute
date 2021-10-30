@@ -16,8 +16,9 @@
 		2A87B00D272D6D7F00E59BA8 /* iasl in Script.command */ = {isa = PBXBuildFile; fileRef = 2A87B009272D6D6F00E59BA8 /* iasl */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2AD9542F272D4C960074AB4D /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = 2AD9542E272D4C960074AB4D /* Sparkle */; };
 		2AD95434272D565D0074AB4D /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD95433272D565D0074AB4D /* About.swift */; };
-		2AD99AC8272D46B3002C419B /* SSDT-MUTE-GENERIC-RADEON.aml in Script.command */ = {isa = PBXBuildFile; fileRef = 2AD99AC7272D46A4002C419B /* SSDT-MUTE-GENERIC-RADEON.aml */; };
 		2AF12EC5255BEB4200FC3DBF /* script.command in Script.command */ = {isa = PBXBuildFile; fileRef = 2A40DCF7255BE83200D3EE4A /* script.command */; };
+		2AFF3A90272D91E600EE82F7 /* PCI0.PEG0.GFX0.EGP1.aml in Script.command */ = {isa = PBXBuildFile; fileRef = 2AFF3A8F272D91DE00EE82F7 /* PCI0.PEG0.GFX0.EGP1.aml */; };
+		2AFF3A93272D921B00EE82F7 /* PCI0.PEG0.PEGP.aml in Script.command */ = {isa = PBXBuildFile; fileRef = 2AFF3A92272D921200EE82F7 /* PCI0.PEG0.PEGP.aml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +28,9 @@
 			dstPath = script;
 			dstSubfolderSpec = 7;
 			files = (
+				2AFF3A93272D921B00EE82F7 /* PCI0.PEG0.PEGP.aml in Script.command */,
+				2AFF3A90272D91E600EE82F7 /* PCI0.PEG0.GFX0.EGP1.aml in Script.command */,
 				2A87B00D272D6D7F00E59BA8 /* iasl in Script.command */,
-				2AD99AC8272D46B3002C419B /* SSDT-MUTE-GENERIC-RADEON.aml in Script.command */,
 				2AF12EC5255BEB4200FC3DBF /* script.command in Script.command */,
 			);
 			name = Script.command;
@@ -51,7 +53,8 @@
 		2A87B004272D585500E59BA8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2A87B009272D6D6F00E59BA8 /* iasl */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = iasl; sourceTree = "<group>"; };
 		2AD95433272D565D0074AB4D /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = About.swift; path = "AMD Mute/About.swift"; sourceTree = SOURCE_ROOT; };
-		2AD99AC7272D46A4002C419B /* SSDT-MUTE-GENERIC-RADEON.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SSDT-MUTE-GENERIC-RADEON.aml"; sourceTree = "<group>"; };
+		2AFF3A8F272D91DE00EE82F7 /* PCI0.PEG0.GFX0.EGP1.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = PCI0.PEG0.GFX0.EGP1.aml; sourceTree = "<group>"; };
+		2AFF3A92272D921200EE82F7 /* PCI0.PEG0.PEGP.aml */ = {isa = PBXFileReference; lastKnownFileType = file; path = PCI0.PEG0.PEGP.aml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,8 +107,9 @@
 		2A40DCF6255BE80700D3EE4A /* script */ = {
 			isa = PBXGroup;
 			children = (
+				2AFF3A92272D921200EE82F7 /* PCI0.PEG0.PEGP.aml */,
+				2AFF3A8F272D91DE00EE82F7 /* PCI0.PEG0.GFX0.EGP1.aml */,
 				2A87B009272D6D6F00E59BA8 /* iasl */,
-				2AD99AC7272D46A4002C419B /* SSDT-MUTE-GENERIC-RADEON.aml */,
 				2A40DCF7255BE83200D3EE4A /* script.command */,
 			);
 			path = script;

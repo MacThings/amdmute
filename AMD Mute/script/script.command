@@ -22,18 +22,24 @@ function generate()
     
     if [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
         _helpDefaultWrite "Supported" "Yes"
+        file="PCI0.PEG0.GFX0.EGP1"
+        
+    elif [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
+        _helpDefaultWrite "Supported" "Yes"
+        file="PCI0.PEG0.PEGP"
     else
         _helpDefaultWrite "Supported" "No"
     fi
     
     dev_path=$( echo "${dev_path%.*}" )
     
-    cp SSDT-MUTE-GENERIC-RADEON.aml /private/tmp/.
-    ./iasl -d /private/tmp/SSDT-MUTE-GENERIC-RADEON.aml
-    perl -pi -e "s/XXXX/$dev_path/g" /private/tmp/SSDT-MUTE-GENERIC-RADEON.dsl
-    ./iasl -oa /private/tmp/SSDT-MUTE-GENERIC-RADEON.dsl
-    cp /private/tmp/SSDT-MUTE-GENERIC-RADEON.aml ~/Desktop/.
-    rm /private/tmp/SSDT-MUTE-GENERIC-RADEON*
+    cp "$file".aml ~/Desktop/SSDT-MUTE-GENERIC-RADEON.aml
+    #cp "$file".aml /private/tmp/.
+    #./iasl -d /private/tmp/"$file".aml
+    #perl -pi -e "s/XXXX/$dev_path/g" /private/tmp/"$file".dsl
+    #./iasl -oa /private/tmp/"$file".dsl
+    #cp /private/tmp/"$file".aml ~/Desktop/SSDT-MUTE-GENERIC-RADEON.aml
+    #rm /private/tmp/"$file"*
 }
 
 $1

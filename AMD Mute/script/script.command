@@ -18,9 +18,7 @@ cd "$MY_PATH"
 
 function generate()
 {
-    dev_path=$( ioreg -p IODeviceTree -n HDAU -r | grep "acpi-path" | sed -e 's/.*\:\///g' -e 's/_SB\///g' -e 's/HDAU.*"//g' -e 's/\/$//g' -e 's/@[0-9][0-9][0-9][0-9][0-9]//g' -e 's/@[0-9][0-9][0-9][0-9]//g' -e 's/@[0-9][0-9][0-9]//g' -e 's/@[0-9][0-9]//g' -e 's/@[0-9]//g' -e 's/\//./g'  )
-    
-    #check=$( echo "$dev_path" | sed 's/.*\.//g')
+    dev_path=$( ioreg -p IODeviceTree -n HDAU -r | grep "acpi-path" | sed -e 's/.*\:\///g' -e 's/_SB\///g' -e 's/HDAU.*"//g' -e 's/\/$//g' -e 's/@[0-9]*//g' -e 's/\//./g'  )
     
     if [[ "$dev_path" = "PCI0.PEG0.GFX0.EGP1" ]]; then
         _helpDefaultWrite "Supported" "Yes"
@@ -35,7 +33,7 @@ function generate()
     perl -pi -e "s/XXXX/$dev_path/g" /private/tmp/SSDT-MUTE-GENERIC-RADEON.dsl
     ./iasl -oa /private/tmp/SSDT-MUTE-GENERIC-RADEON.dsl
     cp /private/tmp/SSDT-MUTE-GENERIC-RADEON.aml ~/Desktop/.
-    rm /private/tmp/SSDT-MUTE-GENERIC-RADEON.aml
+    rm /private/tmp/SSDT-MUTE-GENERIC-RADEON*
 }
 
 $1

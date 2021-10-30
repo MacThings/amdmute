@@ -16,5 +16,7 @@
 /* Class = "NSMenuItem"; title = "Check for Updates..."; ObjectID = "sAs-9d-8p8"; */
 "sAs-9d-8p8.title" = "Suche nach Updates...";
 
+/* Class = "NSMenuItem"; title = "Quit"; ObjectID = "cnF-vU-lGf"; */
+"cnF-vU-lGf.title" = "Beenden";
 
 

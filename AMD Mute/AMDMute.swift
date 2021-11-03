@@ -12,6 +12,8 @@ class AMDMute: NSViewController {
     
     @IBOutlet weak var bt_generate: NSButton!
     @IBOutlet weak var bt_quit: NSButton!
+    @IBOutlet weak var qualified_text: NSTextField!
+    @IBOutlet weak var unqualified_text: NSTextField!
     
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
@@ -19,6 +21,14 @@ class AMDMute: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredContentSize = NSMakeSize(self.view.frame.size.width, self.view.frame.size.height);
+        
+        self.syncShellExec(path: self.scriptPath, args: [""])
+        
+        let qualified = UserDefaults.standard.string(forKey: "Qualified")
+        if qualified == "Yes" {
+            print("yo")
+        }
+        
     }
         
     override func viewDidAppear() {

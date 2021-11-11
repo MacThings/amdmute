@@ -5,3 +5,7 @@
 "Ok" = "Ok";
 
 "Completed the creation of the SSDT. You can find it on yout desktop. Good luck.\n\nSSDT-MUTE-GENERIC-RADEON.aml" = "Erstellung der SSDT abgeschlossen. Du findest sie auf Deinem Schreibtisch. Viel Glück.\n\nSSDT-MUTE-GENERIC-RADEON.aml";
+
+"Generate a SSDT to disable GFX audio. Should work for the most systems with one GFX card installed." = "Erzeuge eine SSDT um die Tonausgabe der Grafikkarte zu unterdrücken. Die SSDT sollte für die meisten Systeme mit einer AMD Grafikkarte funktionieren.";
+
+"Sorry. Cant find any PCI Path of the HDAU Device in your System. Creation of a SSDT is not possible." = "Leider kann ich keinen PCI Pfad zum HDAU Device finden. Die SSDT kann nicht erstellt werden.";

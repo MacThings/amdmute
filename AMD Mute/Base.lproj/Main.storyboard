@@ -98,7 +98,7 @@
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XQY-Bg-UMu">
                                 <rect key="frame" x="18" y="44" width="239" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" title="Generate a SSDT to disable GFX audio. Should work for the most systems with one GFX card installed." id="jD1-XH-Q5A">
+                                <textFieldCell key="cell" selectable="YES" title="--do not localize--" id="jD1-XH-Q5A">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -132,22 +132,12 @@ DQ
                                     <action selector="quit:" target="xne-2I-U2u" id="t1q-d8-hUi"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-b2-kg0">
-                                <rect key="frame" x="18" y="101" width="239" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" selectable="YES" title="Sorry. Cant find any PCI Path of the HDAU Device in your System. Creation of a SSDT is not possible." id="fdD-TV-qds">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="bt_generate" destination="UeA-R0-1de" id="jGC-X8-aAY"/>
                         <outlet property="bt_quit" destination="OFS-2v-45D" id="kEY-F5-WcI"/>
                         <outlet property="qualified_text" destination="XQY-Bg-UMu" id="gdY-lZ-tkq"/>
-                        <outlet property="unqualified_text" destination="Z7e-b2-kg0" id="HI8-YC-Uuc"/>
                     </connections>
                 </viewController>
                 <customObject id="g0T-2c-0eo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

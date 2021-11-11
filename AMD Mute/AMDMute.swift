@@ -13,8 +13,7 @@ class AMDMute: NSViewController {
     @IBOutlet weak var bt_generate: NSButton!
     @IBOutlet weak var bt_quit: NSButton!
     @IBOutlet weak var qualified_text: NSTextField!
-    @IBOutlet weak var unqualified_text: NSTextField!
-    
+   
     
     let scriptPath = Bundle.main.path(forResource: "/script/script", ofType: "command")!
     
@@ -26,9 +25,12 @@ class AMDMute: NSViewController {
         
         let qualified = UserDefaults.standard.string(forKey: "Qualified")
         if qualified == "Yes" {
-            print("yo")
+            self.qualified_text.stringValue = NSLocalizedString("Generate a SSDT to disable GFX audio. Should work for the most systems with one GFX card installed.", comment: "")
+        } else {
+            self.qualified_text.stringValue = NSLocalizedString("Sorry. Cant find any PCI Path of the HDAU Device in your System. Creation of a SSDT is not possible.", comment: "")
+            self.bt_generate.isHidden = true
+            self.bt_quit.isHidden = false
         }
-        
     }
         
     override func viewDidAppear() {
